@@ -8,18 +8,21 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
 import Home from './Screens/Home/Home';
+import Navigation from './Components/Navigation/Navigation';
+import { NavigationContainer } from '@react-navigation/native';
+
 
 function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
-        <Home />
+        <Navigation />
+      {/* <Home /> */}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
     flex: 1,
     backgroundColor: '#FCFCFD',
   },
