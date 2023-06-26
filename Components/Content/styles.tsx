@@ -137,7 +137,6 @@ const styles = StyleSheet.create({
   },
 
   heart: {
-    backgroundColor: '#E9E9E9',
   },
 })
 

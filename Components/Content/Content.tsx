@@ -12,32 +12,47 @@ const Content = () => {
       name: "nykaa",
       image: require("../../Assets/Images/product.png"),
       description: "nyx professional makeup",
+      match: "super"
     },
     {
       id: 98,
       name: "nykaa",
       image: require("../../Assets/Images/product.png"),
       description: "nyx professional makeup",
+      match: "good"
     },
     {
       id: 100,
       name: "nykaa",
       image: require("../../Assets/Images/product.png"),
       description: "nyx professional makeup",
+      match: "average"
     },
     {
       id: 79,
       name: "nykaa",
       image: require("../../Assets/Images/product.png"),
       description: "nyx professional makeup",
+      match: "poor"
     },
   ]
 
   const ProductContainer = ({ product }: any) => (
     <TouchableOpacity style={styles.productContainer} activeOpacity={0.8}>
       <View style={styles.productMatchContainer}>
-        <Image source={{uri: "https://img.icons8.com/offices/30/lightning-bolt.png"}} style={styles.matchIcon} />
-        <Text style={styles.productMatchText}>super Match</Text>
+        {
+          product.match === "super" ? (
+
+            <Image source={{uri: "https://img.icons8.com/offices/30/lightning-bolt.png"}} style={styles.matchIcon} />
+          ) : product.match === "good" ? (
+            <Image source={{uri: "https://img.icons8.com/3d-fluency/94/star.png"}} style={styles.matchIcon} />
+          ) : product.match === "average" ? (
+            <Image source={{uri: "https://img.icons8.com/color/48/comet.png"}} style={styles.matchIcon} />
+          ) : (
+            <Image source={{uri: "https://img.icons8.com/color/48/flash-bang.png"}} style={styles.matchIcon} />
+          )
+        }
+        <Text style={styles.productMatchText}>{product.match} Match</Text>
       </View>
       <View style={styles.productTopContainer}>
         <Image source={product.image} style={styles.productImage} />
