@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     gap: 20,
+    // minHeight: 300,
   },
 
   topTextContainer: {
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderColor: '#000',
     borderWidth: 1,
-    position: 'relative',
     marginBottom: 20,
   },
 
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   productBottomButton: {
     borderColor: '#000',
     borderWidth: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 15,
     paddingVertical: 5,
     borderRadius: 20,
   },
